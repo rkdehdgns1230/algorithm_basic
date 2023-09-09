@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAX = 1000005;
+const int MAX = 100000001;
 int dat[MAX];
 int pos = 0;
 
@@ -25,17 +25,13 @@ void print() {
 }
 
 void test() {
-	push(1);
-	print();
+	time_t start, end;
+	start = time(NULL);
+	for (int i = 0; i < MAX; i++)
+		push(1);
+	end = time(NULL);
 
-	push(2);
-	push(3);
-	print();
-	
-	pop();
-	print();
-
-	cout << top() << "\n";
+	cout << (double)(end - start) << endl;
 }
 
 int main() {
